@@ -46,8 +46,8 @@ function DestroyLines()
 	NumeroLinhas = 0;
 };
 
-document.body.addEventListener('mouseup', function(e){
-	MD=false;
+window.addEventListener('mouseup', function(e){
+	MD = false;
 	Act = 'O';
 });
 
@@ -69,10 +69,10 @@ function CreateLine(Letra)
 	document.getElementById('eraser').addEventListener('click', DestroyLines, false);
 };
 
-document.body.onmousemove = function(e){
+window.onmousemove = function(e){
 	
-	posX = e.clientX;
-	posY = e.clientY;
+	posX = e.clientX-15;
+	posY = e.clientY-15;
 
 	if(MD)
 	{
